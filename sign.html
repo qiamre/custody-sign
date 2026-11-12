@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>توقيع إقرار عهدة — قيم العقارية</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<style>
+:root{--charcoal:#2B2F36;--ink:#1B1E23;--soft:#EEF0F3;--bg:#F5F6F8;--surface:#fff;--text:#2B2F36;--muted:#727A86;--faint:#9AA1AC;--line:#E4E7EC;--line-2:#EDEFF2;--crimson:#B12028;--crimson-soft:#FBEBEC;--green:#2E7D51;--green-soft:#E8F4EC}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Tajawal',-apple-system,'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(--text);font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased}
+button{font-family:inherit;cursor:pointer}
+.wrap{max-width:760px;margin:0 auto;padding:26px 16px 50px}
+.brand{display:flex;align-items:center;gap:12px;justify-content:center;margin-bottom:18px}
+.mark{width:44px;height:44px;border-radius:12px;background:linear-gradient(150deg,var(--crimson),#8E1A21);display:grid;place-items:center;box-shadow:0 3px 10px rgba(177,32,40,.32);flex:none}
+.mark svg{width:24px;height:24px}
+.brand b{font-size:17px;font-weight:800;display:block}
+.brand span{font-size:12px;color:var(--muted)}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:18px;box-shadow:0 6px 24px rgba(27,30,35,.08);overflow:hidden}
+.top{background:linear-gradient(95deg,#2B2F36,#3a3f47);color:#fff;padding:22px 24px}
+.top h1{font-size:19px;font-weight:800}
+.top .ref{font-size:12.5px;color:rgba(255,255,255,.75);margin-top:4px;font-variant-numeric:tabular-nums}
+.body{padding:22px 24px}
+.sec{margin-bottom:20px}
+.sec h3{font-size:13px;font-weight:800;color:var(--crimson);margin-bottom:10px;padding-bottom:5px;border-bottom:1px solid var(--line-2)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.grid2 .c{background:#fff;padding:11px 13px}
+.grid2 label{display:block;font-size:11.5px;color:var(--muted);font-weight:600;margin-bottom:2px}
+.grid2 b{font-size:14px;word-break:break-word}
+.tw{border:1px solid var(--line);border-radius:12px;overflow:hidden}
+table{width:100%;border-collapse:collapse}
+th{text-align:right;font-size:12px;color:var(--muted);font-weight:700;padding:10px 12px;border-bottom:1px solid var(--line);background:#FAFBFC}
+td{padding:11px 12px;border-bottom:1px solid var(--line-2);font-size:14px}
+tr:last-child td{border-bottom:none}
+.mono{font-variant-numeric:tabular-nums}
+.terms{font-size:13.5px;line-height:1.9;color:#3a3f47}
+.terms ul{margin:0 18px}.terms li{margin-bottom:4px}
+.consent{display:flex;gap:11px;align-items:flex-start;cursor:pointer;padding:12px;border:1px solid var(--line);border-radius:12px;user-select:none}
+.consent .ck{width:22px;height:22px;border:1.5px solid var(--line);border-radius:6px;flex:none;display:grid;place-items:center;margin-top:1px;color:#fff}
+.consent.on{border-color:var(--charcoal);background:var(--soft)}
+.consent.on .ck{background:var(--charcoal);border-color:var(--charcoal)}
+.consent .ck svg{width:15px;height:15px}
+.consent span{font-size:13.5px;line-height:1.6}
+.sigwrap{position:relative;border:1.5px dashed var(--line);border-radius:12px;background:#FAFBFC;margin-top:12px}
+#pad{display:block;width:100%;height:190px;touch-action:none;border-radius:12px}
+.hint{position:absolute;inset:0;display:grid;place-items:center;color:var(--faint);font-size:13px;pointer-events:none}
+.row{display:flex;gap:8px;margin-top:8px}
+.btn{border:1px solid var(--line);background:#fff;color:var(--text);padding:9px 15px;border-radius:10px;font-weight:600;font-size:14px}
+.btn.sm{padding:6px 12px;font-size:13px}
+.btn.primary{background:var(--charcoal);color:#fff;border-color:var(--charcoal);padding:12px 20px;font-size:15px}
+.btn:disabled{opacity:.55;cursor:not-allowed}
+.foot{padding:16px 24px;border-top:1px solid var(--line);display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.foot small{color:var(--muted);font-size:12px}
+.msg{padding:54px 26px;text-align:center}
+.msg .ic{width:64px;height:64px;border-radius:18px;display:grid;place-items:center;margin:0 auto 18px}
+.msg .ic svg{width:32px;height:32px}
+.msg .ic.ok{background:var(--green-soft);color:var(--green)}
+.msg .ic.bad{background:var(--crimson-soft);color:var(--crimson)}
+.msg h2{font-size:20px;font-weight:800;margin-bottom:8px}
+.msg p{color:var(--muted);font-size:14px;max-width:440px;margin:0 auto;line-height:1.7}
+.msg .hash{margin-top:14px;font-size:11px;color:var(--faint);direction:ltr;word-break:break-all;font-variant-numeric:tabular-nums}
+.spin{width:30px;height:30px;border:3px solid var(--line);border-top-color:var(--charcoal);border-radius:50%;margin:0 auto 14px;animation:sp .8s linear infinite}
+@keyframes sp{to{transform:rotate(360deg)}}
+.note{text-align:center;color:var(--faint);font-size:11.5px;margin-top:14px}
+.toast{position:fixed;bottom:20px;left:50%;transform:translate(-50%,80px);background:var(--crimson);color:#fff;padding:11px 18px;border-radius:12px;font-weight:600;font-size:14px;opacity:0;transition:.25s;z-index:9}
+.toast.show{transform:translate(-50%,0);opacity:1}
+@media(max-width:560px){.tw thead{display:none}.tw tr{display:flex;flex-direction:column;gap:2px;padding:12px 14px;border-bottom:1px solid var(--line-2)}.tw tr:last-child{border-bottom:none}.tw td{border:none;padding:0;font-size:13px;color:var(--muted)}.tw td:nth-child(2){order:-1;font-size:14.5px;color:var(--text)}.tw td:nth-child(4){direction:ltr;text-align:right;word-break:break-all}.grid2{grid-template-columns:1fr}.top,.body,.foot{padding-left:16px;padding-right:16px}.btn.primary{width:100%}}
+
+/* PDF stage (off-screen A4) */
+#stage{position:absolute;left:-10000px;top:0}
+.a4{width:794px;background:#fff;color:#20242A;padding:48px 54px;font-family:'Tajawal',sans-serif;direction:rtl}
+.a4 .hd{display:flex;justify-content:space-between;align-items:flex-start;border-bottom:2px solid #2B2F36;padding-bottom:16px}
+.a4 .co{display:flex;gap:12px;align-items:center}
+.a4 .co b{font-size:19px;font-weight:800;display:block}.a4 .co span{font-size:12px;color:#6a7079}
+.a4 .meta{text-align:left;font-size:12px;color:#4a505a}
+.a4 .meta .r{font-weight:800;color:#B12028;font-size:14px}
+.a4 h1{font-size:20px;font-weight:800;text-align:center;margin:24px 0 6px}
+.a4 .sub{text-align:center;color:#6a7079;font-size:12.5px;margin-bottom:22px}
+.a4 h3{font-size:13px;font-weight:800;color:#B12028;margin:0 0 9px;padding-bottom:5px;border-bottom:1px solid #E9E9E9}
+.a4 .s{margin-bottom:20px}
+.a4 table{width:100%;border-collapse:collapse;font-size:13px}
+.a4 th{background:#F4F5F6;padding:8px 10px;border:1px solid #E4E4E4;font-size:12px;color:#20242A}
+.a4 td{padding:8px 10px;border:1px solid #E4E4E4}
+.a4 .t{font-size:12.5px;line-height:1.9;color:#3a3f47}
+.a4 .t ul{list-style:none;margin:0}.a4 .t li{position:relative;padding-right:16px;margin-bottom:3px}.a4 .t li::before{content:'•';position:absolute;right:2px;top:0;color:#B12028}
+.a4 .agree{background:#F4F5F6;border:1px solid #E4E4E4;border-radius:8px;padding:12px 14px;font-size:12.5px;line-height:1.8}
+.a4 .sg{margin-top:24px;display:flex;justify-content:flex-start}
+.a4 .sg .box{width:300px;text-align:center}
+.a4 .sg img{max-height:80px;max-width:280px}
+.a4 .sg .ln{border-top:1.5px solid #333;padding-top:7px;font-size:12.5px;font-weight:700}
+.a4 .sg .st{font-size:11px;color:#6a7079;margin-top:3px}
+.a4 .ft{margin-top:30px;padding-top:12px;border-top:1px solid #E9E9E9;font-size:10.5px;color:#9098a1;line-height:1.7}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="brand"><div class="mark"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="8" height="8" rx="1.7" fill="#fff"/><rect x="13" y="3" width="8" height="8" rx="1.7" fill="#fff" opacity=".55"/><rect x="3" y="13" width="8" height="8" rx="1.7" fill="#fff" opacity=".55"/><rect x="13" y="13" width="8" height="8" rx="1.7" fill="#fff"/></svg></div><div><b>شركة قيم العقارية</b><span>إدارة العهد والأصول</span></div></div>
+  <div class="card" id="app"><div class="msg"><div class="spin"></div><p>جاري تحميل الإقرار…</p></div></div>
+  <div class="note">وثيقة إلكترونية — شركة قيم العقارية</div>
+</div>
+<div id="stage" aria-hidden="true"></div>
+<div class="toast" id="toast"></div>
+<script>
+const N8N='https://qiamree.app.n8n.cloud/webhook';
+const COMPANY='شركة قيم العقارية';
+const ICON={chk:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m20 6-11 11L4 12"/></svg>',warn:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.2 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.2a2 2 0 0 0-3.4 0Z"/><path d="M12 9v4M12 17h.01"/></svg>'};
+const $=s=>document.querySelector(s);
+const esc=v=>(v==null?'':String(v)).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const token=(new URLSearchParams(location.search).get('token')||'').trim();
+let D=null,consent=false,pad=null;
+
+function toast(t){const e=$('#toast');e.textContent=t;e.classList.add('show');setTimeout(()=>e.classList.remove('show'),2600)}
+function fmt(d){return d.toLocaleString('ar-SA-u-ca-gregory-nu-latn',{year:'numeric',month:'long',day:'numeric',hour:'2-digit',minute:'2-digit'})}
+function msg(kind,title,text,extra){$('#app').innerHTML=`<div class="msg"><div class="ic ${kind}">${kind==='ok'?ICON.chk:ICON.warn}</div><h2>${title}</h2><p>${text}</p>${extra||''}</div>`}
+function parseAssets(v){if(Array.isArray(v))return v;if(typeof v==='string'){const t=v.trim();if(t.startsWith('[')){try{return JSON.parse(t)}catch(e){}}return t.split('\n').map(x=>x.trim()).filter(Boolean).map(x=>({name:x}))}return[]}
+function termsHtml(t){const lines=String(t||'').split('\n').map(l=>l.trim()).filter(Boolean);let h='',open=false;lines.forEach(l=>{if(l.startsWith('-')){if(!open){h+='<ul>';open=true}h+=`<li>${esc(l.slice(1).trim())}</li>`}else{if(open){h+='</ul>';open=false}h+=`<p style="margin:4px 0">${esc(l)}</p>`}});if(open)h+='</ul>';return h}
+function assetRows(list){return list.map(a=>`<tr><td class="mono">${esc(a.tag||'')}</td><td><b>${esc(a.name||'')}</b></td><td>${esc(a.category||'')}</td><td class="mono">${esc(a.serial||'—')}</td></tr>`).join('')}
+
+async function load(){
+  if(!token)return msg('bad','رابط غير صالح','الرابط ناقص. افتح الرابط كما وصلك في البريد.');
+  try{
+    const r=await fetch(N8N+'/get-custody?token='+encodeURIComponent(token));
+    if(!r.ok)throw new Error(r.status);
+    let d=await r.json();if(Array.isArray(d))d=d[0];
+    if(!d||!d.ref)return msg('bad','رابط غير صالح','هذا الرابط غير معروف أو انتهت صلاحيته. تواصل مع إدارة العهد.');
+    D=d;
+    if(String(d.status).toLowerCase()==='signed')return msg('ok','تم توقيع هذا الإقرار مسبقًا',esc(d.ref)+' — لا حاجة لأي إجراء آخر.');
+    render();
+  }catch(e){msg('bad','تعذّر تحميل الإقرار','تأكد من اتصالك بالإنترنت ثم حدّث الصفحة.')}
+}
+
+function render(){
+  const assets=parseAssets(D.assets);
+  $('#app').innerHTML=`
+  <div class="top"><h1>${esc(D.doc_title||'إقرار استلام عهدة')}</h1><div class="ref">${esc(D.ref)} · إصدار v${esc(D.eula_version||'1')}</div></div>
+  <div class="body">
+    <div class="sec"><h3>بياناتك</h3><div class="grid2"><div class="c"><label>الاسم</label><b>${esc(D.employee_name)}</b></div><div class="c"><label>الرقم الوظيفي</label><b>${esc(D.employee_id)}</b></div><div class="c"><label>البريد</label><b dir="ltr">${esc(D.employee_email)}</b></div><div class="c"><label>المرجع</label><b class="mono">${esc(D.ref)}</b></div></div></div>
+    <div class="sec"><h3>العهد المسلّمة إليك</h3><div class="tw"><table><thead><tr><th>الوسم</th><th>البند</th><th>الفئة</th><th>المعرّف</th></tr></thead><tbody>${assetRows(assets)}</tbody></table></div></div>
+    <div class="sec"><h3>التعهدات</h3><div class="terms">${termsHtml(D.terms)}</div></div>
+    <div class="sec"><h3>الموافقة والتوقيع</h3>
+      <div class="consent" id="consent"><div class="ck"></div><span>أقر بأنني اطّلعت على هذا الإقرار وأوافق على استلام العهدة الموضّحة أعلاه وتحمّل مسؤوليتها وفق التعهدات.</span></div>
+      <div class="sigwrap"><canvas id="pad"></canvas><div class="hint" id="hint">وقّع هنا بإصبعك أو الماوس</div></div>
+      <div class="row"><button class="btn sm" id="clr">مسح التوقيع</button></div>
+    </div>
+  </div>
+  <div class="foot"><button class="btn primary" id="go">اعتماد وتوقيع الإقرار</button><small>بالتوقيع تقرّ بصحة بياناتك واستلامك للعهدة.</small></div>`;
+  const c=$('#consent');c.onclick=()=>{consent=!consent;c.classList.toggle('on',consent);c.querySelector('.ck').innerHTML=consent?ICON.chk:''};
+  pad=makePad($('#pad'));
+  $('#clr').onclick=()=>{pad.clear();$('#hint').style.display='grid'};
+  $('#go').onclick=submit;
+}
+
+function makePad(cv){
+  const dpr=Math.max(window.devicePixelRatio||1,2);const r=cv.getBoundingClientRect();
+  cv.width=r.width*dpr;cv.height=r.height*dpr;const ctx=cv.getContext('2d');ctx.scale(dpr,dpr);
+  ctx.lineWidth=2.4;ctx.lineCap='round';ctx.lineJoin='round';ctx.strokeStyle='#1B1E23';
+  let down=false,last=null,empty=true;
+  const pos=e=>{const b=cv.getBoundingClientRect();return{x:e.clientX-b.left,y:e.clientY-b.top}};
+  cv.addEventListener('pointerdown',e=>{e.preventDefault();cv.setPointerCapture(e.pointerId);down=true;last=pos(e);empty=false;$('#hint').style.display='none'});
+  cv.addEventListener('pointermove',e=>{if(!down)return;e.preventDefault();const p=pos(e);ctx.beginPath();ctx.moveTo(last.x,last.y);ctx.lineTo(p.x,p.y);ctx.stroke();last=p});
+  const up=()=>{down=false};cv.addEventListener('pointerup',up);cv.addEventListener('pointercancel',up);
+  return{isEmpty:()=>empty,clear:()=>{ctx.clearRect(0,0,cv.width,cv.height);empty=true},url:()=>cv.toDataURL('image/png')};
+}
+
+async function buildPdf(signedAt,sig){
+  const assets=parseAssets(D.assets);
+  $('#stage').innerHTML=`<div class="a4">
+    <div class="hd"><div class="co"><div class="mark" style="width:44px;height:44px"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="8" height="8" rx="1.7" fill="#fff"/><rect x="13" y="3" width="8" height="8" rx="1.7" fill="#fff" opacity=".55"/><rect x="3" y="13" width="8" height="8" rx="1.7" fill="#fff" opacity=".55"/><rect x="13" y="13" width="8" height="8" rx="1.7" fill="#fff"/></svg></div><div><b>${COMPANY}</b><span>إدارة العهد والأصول</span></div></div>
+      <div class="meta"><div class="r">${esc(D.ref)}</div><div>${fmt(signedAt)}</div></div></div>
+    <h1>${esc(D.doc_title||'إقرار استلام عهدة')}</h1>
+    <div class="sub">وثيقة إلكترونية موقّعة — إصدار الإقرار v${esc(D.eula_version||'1')}</div>
+    <div class="s"><h3>بيانات الموظف</h3><table><tr><th style="width:22%">الاسم</th><td>${esc(D.employee_name)}</td><th style="width:20%">الرقم الوظيفي</th><td>${esc(D.employee_id)}</td></tr><tr><th>البريد</th><td colspan="3" style="direction:ltr;text-align:right">${esc(D.employee_email)}</td></tr></table></div>
+    <div class="s"><h3>العهد المسلّمة</h3><table><thead><tr><th>الوسم</th><th>البند</th><th>الفئة</th><th>المعرّف</th></tr></thead><tbody>${assetRows(assets)}</tbody></table></div>
+    <div class="s"><h3>التعهدات</h3><div class="t">${termsHtml(D.terms)}</div></div>
+    <div class="s"><h3>الإقرار والموافقة</h3><div class="agree">أقر بأنني اطّلعت على هذا الإقرار وأوافق على استلام العهدة الموضّحة أعلاه وتحمّل مسؤوليتها وفق التعهدات. تمت الموافقة والتوقيع إلكترونيًا بتاريخ ${fmt(signedAt)}.</div></div>
+    <div class="sg"><div class="box"><img src="${sig}"><div class="ln">توقيع الموظف — ${esc(D.employee_name)}</div><div class="st">${fmt(signedAt)}</div></div></div>
+    <div class="ft">وُقّع هذا المستند إلكترونيًا عبر رابط توقيع فريد أُرسل إلى ${esc(D.employee_email)}. معرّف الطلب: ${esc(token)}. تُحفظ بصمة الملف (SHA-256) ووقت التوقيع وعنوان الشبكة في سجل العهد لدى ${COMPANY}.</div>
+  </div>`;
+  try{await document.fonts.ready}catch(e){}
+  await new Promise(r=>setTimeout(r,80));
+  const el=$('#stage').firstElementChild;
+  const canvas=await html2canvas(el,{scale:2,backgroundColor:'#ffffff',logging:false});
+  const {jsPDF}=window.jspdf;const pdf=new jsPDF({unit:'pt',format:'a4',orientation:'portrait',compress:true});
+  const pw=pdf.internal.pageSize.getWidth(),ph=pdf.internal.pageSize.getHeight();
+  const img=canvas.toDataURL('image/jpeg',0.9);const ih=canvas.height*pw/canvas.width;
+  for(let y=0,i=0;y<ih;y+=ph,i++){if(i)pdf.addPage();pdf.addImage(img,'JPEG',0,-y,pw,ih)}
+  pdf.setProperties({title:D.ref+' — '+(D.doc_title||''),subject:'إقرار عهدة موقّع',creator:COMPANY,author:D.employee_name});
+  $('#stage').innerHTML='';
+  return pdf.output('datauristring').split(',')[1];
+}
+
+async function submit(){
+  if(!consent)return toast('أقر بالموافقة أولًا');
+  if(pad.isEmpty())return toast('التوقيع مطلوب');
+  const b=$('#go');b.disabled=true;b.textContent='جاري التوقيع وحفظ الملف…';
+  try{
+    const signedAt=new Date();
+    const b64=await buildPdf(signedAt,pad.url());
+    const r=await fetch(N8N+'/custody-signed',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({token,pdf_base64:b64,consent:true,client_signed_at:signedAt.toISOString()})});
+    if(r.status===409)return msg('ok','تم توقيع هذا الإقرار مسبقًا',esc(D.ref)+' — لا حاجة لأي إجراء آخر.');
+    if(!r.ok)throw new Error(r.status);
+    let res={};try{res=await r.json()}catch(e){}
+    msg('ok','تم توقيع الإقرار',esc(D.ref)+' — تم استلام توقيعك وحُفظ الإقرار. يمكنك إغلاق الصفحة.',res.doc_hash?`<div class="hash">SHA-256: ${esc(res.doc_hash)}</div>`:'');
+  }catch(e){b.disabled=false;b.textContent='اعتماد وتوقيع الإقرار';toast('تعذّر الإرسال، حاول مرة ثانية')}
+}
+load();
+</script>
+</body>
+</html>
